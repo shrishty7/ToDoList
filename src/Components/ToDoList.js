@@ -3,7 +3,6 @@ import React from "react";
 import Todo from './Todo';
 
 const ToDoList = ({todos, setTodos, filteredTodos}) => {
-    console.log(todos);
     return (
     <div className="todo-container">
       <ul className="todo-list">
@@ -14,5 +13,6 @@ const ToDoList = ({todos, setTodos, filteredTodos}) => {
     </div>
     );
 };
+
 
 export default ToDoList;
