@@ -15,12 +15,10 @@ function App() {
   useEffect(() => {
     getLocalTodos();
   }, []);
-
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
   }, [todos, status]);
-
   const filterHandler = () => {
     switch(status){
       case 'completed':
@@ -35,7 +33,7 @@ function App() {
 
 
     }
-  }
+  };
   const saveLocalTodos = () => {
     if (todos.length >0){
       localStorage.setItem("todos", JSON.stringify(todos));
@@ -51,12 +49,14 @@ function App() {
      console.log(todoLocal)
      setTodos(todoLocal);
     }
-  }
+  };
  
   return (
     <div className="App">
       <header>
-        <h1>To Do List Revirt</h1>
+        <h1>To Do List</h1>
+        
+        <p>Add a new task to the list</p>
       </header>
       <Form 
         inputText = {inputText}
