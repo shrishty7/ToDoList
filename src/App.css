@@ -12,23 +12,58 @@
   header {
     font-size: 2rem;
   }
+  h1 {
+    width:500px;
+    margin: 0 auto;
+    /* background: gray; */
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+    margin-top: 2rem;
+  }
   
-  header,
+  
+  .text{
+    /* background-color: antiquewhite; */
+    /* display: block; */
+    margin-left: 6rem;
+    
+  }
+  input[type="text"]::placeholder {
+                 
+    /* Firefox, Chrome, Opera */
+    /* line-height:70px; */
+    text-align: center; 
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
   form {
     min-height: 20vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    /* background-color: aquamarine; */
+    margin-bottom: 20px;
   }
+  input::placeholder {
+    margin: 0 auto;
+    font: 20px/3 sans-serif;
+}
   form input,
   form button {
-    padding: 0.5rem, 5rem;
+    /* padding: 50rem, 50rem; */
     font-size: 2rem;
     border: none;
     background: #5c5c5c;
+    border-radius: 10px;
+    line-height: 7px;
+
+  }
+  form input {
+    width: 35rem;
+
   }
   form button {
-
     cursor: pointer;
     transition: all 0.3s ease;
   }
@@ -40,50 +75,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: aqua; */
+    width: 100vw;
+    /* height: 60vh; */
   }
   
   .todo-list {
-    min-width: 30%;
-    list-style: none;
+    min-width: 80%;
+    height: 20rem;
+    position: ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: repeat(auto-fill, 50px); */
+
+    gap: 50px;
+    align-items: start;
   }
   
-  .todo {
-    margin: 0.5rem;
-    background: #2f2f2f;
-    font-size: 1.5rem;
-    color: #FFFFFF;
-    /* display: flex; */
-    justify-content: space-between;
-    align-items: center;
-    transition: all 1s ease;
-  }
+  
   .filter-todo {
-    padding: 1rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+
   }
   .todo li {
     flex: 1;
   }
   .todo-button {
     background-color: #c620a7;
-    border-radius: 1rem;
-    padding: 5px 52px;
+    border-radius: 10px;
+    padding: 6px 20px;
     color: #FFFFFF;
+    font-size: 1rem;
+    margin-left: 4rem;
+    height: 2.3rem;
+
 
   }
   .trash-btn,
   .complete-btn {
-    background: #AFAFAF;
+    background: #2F2F2F;
     color: white;
     border: none;
-    padding: 1rem;
+    /* padding: 1rem; */
     cursor: pointer;
     font-size: 1rem;
   }
+
   .complete-btn {
     background: #c620a7;
+    margin: 1rem;
+    padding: 0.6rem 3rem;
+    border-radius: 10px;
   }
   .todo-item {
-    padding: 0rem 0.5rem;
+    padding: 0.5rem 1.5rem;
+    padding-bottom: 2.5rem;
+    /* margin: 10pc; */
+
+  }
+  .todo-input{
+    margin-left: 6rem;
   }
   
   .fa-trash,
@@ -96,13 +148,63 @@
     opacity: 0;
   }
   
-  .completed {
-    border-radius: 1rem;
-    border-color: green;
+  /* #box {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 2vw;
+    background-color: gray;
+    margin-top: 2.5%;
   }
   
+  #dashed {
+    width: 90%;
+    height: 90%;
+    border-width: 5px;
+    border-style: dashed;
+    border-radius: 2vw;
+  } */
+  .display {}
+  .displaynone{
+    display: none;
+  }
+  img {
+    width: 10%;
+    /* margin-top: -2%;
+    padding-left: 2%;
+    padding-right: 2%; */
+    position: static;
+    left: 90%;
+    z-index: 10;
+    /* margin-left: 95%; */
+  }
+  .completed {
+    background: #2f2f2f;
+    font-size: 1.5rem;
+    /* padding: 15px; */
+    color: #FFFFFF;
+    border-radius: 10px;
+    height: 10rem;
+    transition: all 1s ease;
+    border-style: solid;
+    border-color: #7AB530;
+    border-width: 0.08rem;
+  }
+  .incomplete {
+    /* margin: 1.5rem 1.5rem; */
+    background: #2f2f2f;
+    font-size: 1.5rem;
+    /* padding: 15px; */
+    color: #FFFFFF;
+    border-radius: 10px;
+    height: 10rem;
+    transition: all 1s ease;
+    /* box-shadow: 0, 0, 16, 80%; */
+    filter: drop-shadow(0 0 0.75rem #000000);  }
+ 
   /*CUSTOM SELECTOR */
   select {
+  
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -120,10 +222,12 @@
     overflow: hidden;
   }
   select {
-    color: #c620a7;
+    color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     width: 12rem;
+    background-color: #5c5c5c ;
+
   }
   /* Arrow */
   .select::after {
@@ -131,14 +235,16 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem;
-    background: #c620a7;
+    padding: 0.5rem;
+    /* background: #c620a7; */
     cursor: pointer;
     pointer-events: none;
+    color: #FFFFFF;
+   
   }
   /* Transition */
-  /*
+  
   .select:hover::after {
     transform: scale(1.5);
   }
-  */
+ 

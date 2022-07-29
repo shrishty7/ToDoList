@@ -7,26 +7,32 @@ const Todo = ({text, todo, todos, setTodos, key}) => {
     };
 
     const completeHandler = () => {
-        // document.getElementsByClassName("complete-btn").innerHTML="Mark as InComplete";
         setTodos(todos.map((item) => {
             if (item.id === todo.id){
                 return {
                     ...item, completed: !item.completed
+                    
                 }
             }
             return item;
 
         }));
     }
+   
     return (
-        <div className="todo">
-        <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
+        <div className={` "todo"  ${todo.completed ? "completed" : "incomplete"} `} >
+            
+            
+            <li className={`todo-item`}>{text}</li>
+            <img className = {`${todo.completed ? "display" : "displaynone"}`} src="https://i.ibb.co/9VLmKTt/icons8-checkmark-64.png"></img>
+            <hr></hr>
+            <button onClick = {completeHandler} className ={ `complete-btn`} >
+            Mark as {todo.completed? "incomplete" : "completed"}
+            </button>
 
-        <button onClick = {completeHandler} className ={ `complete-btn`} >
-          Click me
-        </button>
 
-        <button onClick={deleteHandler} className = "trash-btn">Delete</button>
+            <button onClick={deleteHandler} className = "trash-btn">Delete</button>
+
         </div>
     );
 };

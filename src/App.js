@@ -55,9 +55,10 @@ function App() {
     <div className="App">
       <header>
         <h1>To Do List</h1>
-        
-        <p>Add a new task to the list</p>
       </header>
+      <div className="text">        
+          <p>Add a new task to the list</p>
+      </div>
       <Form 
         inputText = {inputText}
         todos={todos} 
