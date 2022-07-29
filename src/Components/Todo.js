@@ -24,10 +24,11 @@ const Todo = ({text, todo, todos, setTodos, key}) => {
             
             
             <li className={`todo-item`}>{text}</li>
-            <img className = {`${todo.completed ? "display" : "displaynone"}`} src="https://i.ibb.co/9VLmKTt/icons8-checkmark-64.png"></img>
             <hr></hr>
             <button onClick = {completeHandler} className ={ `complete-btn`} >
+            <img className = {`${todo.completed ? "display" : "displaynone"}`} src="https://i.ibb.co/9VLmKTt/icons8-checkmark-64.png"></img>
             Mark as {todo.completed? "incomplete" : "completed"}
+
             </button>
 
 

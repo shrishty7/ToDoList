@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
   }
   body {
     background-color: #171717;
     color: white;
-    font-family: "Poppins", sans-serif;
     min-height: 100vh;
   }
   header {
@@ -26,7 +27,8 @@
   .text{
     /* background-color: antiquewhite; */
     /* display: block; */
-    margin-left: 6rem;
+    margin-left: 14rem;
+    font-size: 1.5rem;
     
   }
   input[type="text"]::placeholder {
@@ -36,6 +38,8 @@
     text-align: center; 
     color: #FFFFFF;
     font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+
 }
   form {
     min-height: 20vh;
@@ -83,7 +87,7 @@
   .todo-list {
     min-width: 80%;
     height: 20rem;
-    position: ;
+    /* position: ; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
         /* grid-template-columns: repeat(auto-fill, 50px); */
@@ -91,6 +95,7 @@
     gap: 50px;
     align-items: start;
   }
+  
   
   
   .filter-todo {
@@ -125,17 +130,21 @@
   .complete-btn {
     background: #c620a7;
     margin: 1rem;
-    padding: 0.6rem 3rem;
+    width: 17rem;
+    height: 2.5rem;
     border-radius: 10px;
+    /* position: absolute; */
+
   }
   .todo-item {
     padding: 0.5rem 1.5rem;
     padding-bottom: 2.5rem;
     /* margin: 10pc; */
 
+  
   }
   .todo-input{
-    margin-left: 6rem;
+    margin-left: 13rem;
   }
   
   .fa-trash,
@@ -164,18 +173,21 @@
     border-style: dashed;
     border-radius: 2vw;
   } */
-  .display {}
   .displaynone{
     display: none;
   }
+
+  button text{
+    position: fixed;
+  }
+  
   img {
-    width: 10%;
-    /* margin-top: -2%;
-    padding-left: 2%;
-    padding-right: 2%; */
-    position: static;
-    left: 90%;
-    z-index: 10;
+    width: 8%;
+    
+    position: relative;
+    left: 160%;
+    /* bottom: 250%; */
+    /* z-index: 10; */
     /* margin-left: 95%; */
   }
   .completed {
@@ -213,6 +225,7 @@
     box-shadow: none;
     border: 0 !important;
     background-image: none;
+    margin-left: 40rem;
   }
   
   /* Custom Select */
